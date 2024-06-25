@@ -16,12 +16,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   preapproval:
+    name: Show approval requirements
     runs-on: ubuntu-latest
     steps:
     - name: Adding markdown
-      run: echo '### APPROVE THE DEPLOYMENT PLEASE 🚀' >> $GITHUB_STEP_SUMMARY
+      run: echo '### Please ensure all pre-deployment tests have been executed successfully prior to switching to the new environment' >> $GITHUB_STEP_SUMMARY
     
   approval:
     runs-on: ubuntu-latest
