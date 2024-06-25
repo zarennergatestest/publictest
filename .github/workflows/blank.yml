@@ -20,8 +20,9 @@ jobs:
   approval:
     runs-on: ubuntu-latest
     environment: test
-    #if: false
-    steps: []
+    if: false
+    steps:
+    - run: echo This will never run
     
   build:
     runs-on: ubuntu-latest
